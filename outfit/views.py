@@ -18,8 +18,10 @@ def fetch_musinsa_data():
 
     # soup.set 객체에 img 태그 안의 src 속성 값 저장
     # 0번째 요소는 스타일과 관련 없는 링크이므로 저장하지 않아야 함
-
-    soup.set = soup.find_all('img[src]')
+    soup.set = soup.find_all('img')
+    # 제대로 크롤링되었는지 확인
+    for image in soup.set[1:]:
+        print(image['src'])
 
 # 이미지 객체 생성 함수 구현
 
