@@ -25,4 +25,6 @@ urlpatterns = [
     path('anonyboard.html', views.annonyboard,name='annoyboard'),
     path('fashionboard.html', views.fashionboard,name='fashionboard'),
     path('login.html', accounts_views.login, name='login'),
+    path('logout.html', accounts_views.logout, name='logout'),
 ]
+
